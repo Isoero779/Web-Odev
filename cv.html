@@ -9,78 +9,84 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">SAÜ Web Proje</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="api.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-                </ul>
+    <header> <!-- Semantik Header -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">SAÜ Web Proje</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                        <li class="nav-item"><a class="nav-link" href="api.html">İlgi Alanlarım</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <div class="container mt-5 mb-5 flex-grow-1">
+    <main class="container mt-5 mb-5 flex-grow-1"> <!-- Semantik Main -->
         <h1 class="mb-4 border-bottom pb-2">Özgeçmişim</h1>
 
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <section class="col-md-6 mb-4"> <!-- Semantik Section -->
                 <h3>Eğitim Bilgileri</h3>
-                <!-- Ödevin istediği tablo kullanımı -->
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Kurum Adı</th>
-                            <th>Bölüm / Alan</th>
-                            <th>Durum</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sakarya Üniversitesi</td>
-                            <td>Bilgisayar Mühendisliği</td>
-                            <td>2. Sınıf Öğrencisi</td>
-                        </tr>
-                        <tr>
-                            <td>Uğur Fen Lisesi</td>
-                            <td>Sayısal</td>
-                            <td>Mezun</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <article class="p-3 border rounded"> <!-- Semantik Article -->
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th>Kurum Adı</th>
+                                <th>Bölüm / Alan</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sakarya Üniversitesi</td>
+                                <td>Bilgisayar Mühendisliği</td>
+                                <td>2. Sınıf Öğrencisi</td>
+                            </tr>
+                            <tr>
+                                <td>Lise Eğitimim</td>
+                                <td>Sayısal</td>
+                                <td>Mezun</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
 
-            <div class="col-md-6 mb-4">
+            <section class="col-md-6 mb-4"> <!-- Semantik Section -->
                 <h3>Teknik Beceriler</h3>
-                <!-- Ödevin istediği liste kullanımı -->
-                <ul>
-                    <li>C++ Programlama (Orta Düzey)</li>
-                    <li>Java Programlama (Orta Düzey)</li>
-                    <li>HTML & CSS (Temel Düzey)</li>
-                </ul>
-            </div>
+                <article class="p-3 border rounded h-100"> <!-- Semantik Article -->
+                    <ul class="mb-0">
+                        <li>C++ Programlama (Orta Düzey)</li>
+                        <li>Java Programlama (Orta Düzey)</li>
+                        <li>HTML & CSS (Temel Düzey)</li>
+                    </ul>
+                </article>
+            </section>
         </div>
 
         <div class="row mt-3">
-            <div class="col-12">
+            <section class="col-12"> <!-- Semantik Section -->
                 <h3>Projeler ve Deneyimler</h3>
-                <ul>
-                    <li><strong>Kişisel Web Sitesi:</strong> Web Teknolojileri dersi için hazırladığım HTML tabanlı projem.</li>
-                </ul>
-            </div>
+                <article class="p-3 border rounded"> <!-- Semantik Article -->
+                    <ul>
+                        <li><strong>Kişisel Web Sitesi:</strong> Web Teknolojileri dersi için hazırladığım HTML tabanlı projem.</li>
+                    </ul>
+                </article>
+            </section>
         </div>
-    </div>
+    </main>
 
-    <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <footer class="bg-dark text-white text-center py-3 mt-auto"> <!-- Semantik Footer -->
         <div class="container">
             <p class="mb-0">© 2026 Web Teknolojileri Projesi</p>
         </div>

@@ -33,21 +33,61 @@
         <h1 class="mb-4 border-bottom pb-2">Yaşadığım Şehir: Bursa</h1>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <p>Bursa, tarihi dokusu ve doğal güzellikleriyle Türkiye'nin en özel şehirlerinden biridir. Osmanlı İmparatorluğu'na başkentlik yapmış olan bu şehir, her köşesinde tarihi bir iz barındırır. Aynı zamanda her yerinin ağaçlık ve ormanlık olmasından dolayı "Yeşil Bursa" olarak anılır.</p>
                 
                 <h3 class="mt-4">Bursa'da Gezilecek Başlıca Yerler</h3>
                 <ul>
-                    <li><strong>Ulu Cami:</strong> Bursa'nın sembollerinden biridir ve Osmanlı mimarisinin en güzel örneklerindendir. İçerisindeki şadırvan ve hat sanatları oldukça etkileyicidir.</li>
-                    <li><strong>Uludağ:</strong> Türkiye'nin en popüler kış sporları ve kayak merkezidir. Kışın bembeyaz bir örtüyle kaplanırken, yazın kamp ve doğa yürüyüşleri için harika bir yerdir.</li>
-                    <li><strong>Cumalıkızık:</strong> Tarihi dokusu bozulmamış, dar taş sokakları ve renkli ahşap evleriyle ünlü eski bir Osmanlı köyüdür. UNESCO Dünya Mirası Listesi'nde yer alır.</li>
-                    <li><strong>Tophane:</strong> Şehri tepeden izleyebileceğiniz, Osman Gazi ve Orhan Gazi türbelerinin bulunduğu tarihi ve turistik bir bölgedir.</li>
+                    <li><strong>Ulu Cami:</strong> Osmanlı mimarisinin en güzel örneklerindendir.</li>
+                    <li><strong>Uludağ:</strong> Türkiye'nin en popüler kayak merkezidir.</li>
+                    <li><strong>Cumalıkızık:</strong> Tarihi dokusu bozulmamış, UNESCO listesindeki Osmanlı köyüdür.</li>
                 </ul>
             </div>
             
-            <div class="col-md-4 text-center mt-3 mt-md-0">
-                <img src="ulu cami.jpg" class="img-fluid rounded border" alt="Bursa Manzarası">
-                <p class="text-muted mt-2"><small>Bursa Ulu Cami ve Şehir Manzarası</small></p>
+            <div class="col-md-5">
+                <!-- Şehrim Sayfası için zorunlu olan Slider (4 Resimli) -->
+                <div id="sehirSlider" class="carousel slide border rounded shadow-sm bg-secondary bg-opacity-25" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button> <!-- 4. slide -->
+                    </div>
+                    
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="bursa.jpg" class="d-block w-100" style="object-fit: contain; height: 350px;" alt="Bursa Ulu Cami">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-2 py-1">
+                                <p class="mb-0"><small>Bursa Ulu Cami</small></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="uludag.jpg" class="d-block w-100" style="object-fit: contain; height: 350px;" alt="Uludağ Kayak Merkezi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-2 py-1">
+                                <p class="mb-0"><small>Uludağ Kayak Merkezi</small></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="cumalikizik.jpg" class="d-block w-100" style="object-fit: contain; height: 350px;" alt="Tarihi Cumalıkızık Köyü">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-2 py-1">
+                                <p class="mb-0"><small>Tarihi Cumalıkızık Köyü</small></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item"> <!-- İpek fotoğrafını buraya taşıdık -->
+                            <img src="ipek.jpg" class="d-block w-100" style="object-fit: contain; height: 350px;" alt="Bursa İpeği Kozaları">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-2 py-1">
+                                <p class="mb-0"><small>Bursa İpeği Kozaları</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
