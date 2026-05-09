@@ -116,12 +116,17 @@
             const mesaj = document.getElementById('mesaj').value.trim();
             const onay = document.getElementById('onay').checked;
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const telefonRegex = /^[0-9]{10,11}$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const telefonRegex = /^05[0-9]{8,9}$/;
+            const adRegex = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/;
 
             let hatalar = [];
 
-            if (ad === '') hatalar.push("- Ad Soyad alanı boş bırakılamaz.");
+            if (ad === '') {
+                hatalar.push("- Ad Soyad alanı boş bırakılamaz.");
+            } else if (!adRegex.test(ad)) {
+                hatalar.push("- Ad Soyad sadece harflerden oluşmalıdır.");
+            }
             
             if (email === '') {
                 hatalar.push("- E-posta alanı boş bırakılamaz.");
@@ -132,7 +137,7 @@
             if (telefon === '') {
                 hatalar.push("- Telefon alanı boş bırakılamaz.");
             } else if (!telefonRegex.test(telefon)) {
-                hatalar.push("- Telefon sadece rakamlardan oluşmalı ve 10-11 haneli olmalıdır.");
+                hatalar.push("- Telefon '05' ile başlamalı ve 10-11 haneli rakamlardan oluşmalıdır.");
             }
             
             if (konu === '') hatalar.push("- Lütfen bir konu seçiniz.");
@@ -171,10 +176,15 @@
                     this.vueHataMesaji = '';
                     let hatalar = [];
 
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    const telefonRegex = /^[0-9]{10,11}$/;
+                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    const telefonRegex = /^05[0-9]{8,9}$/;
+                    const adRegex = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/;
 
-                    if (!this.form.ad.trim()) hatalar.push("- Ad Soyad alanı boş bırakılamaz.");
+                    if (!this.form.ad.trim()) {
+                        hatalar.push("- Ad Soyad alanı boş bırakılamaz.");
+                    } else if (!adRegex.test(this.form.ad.trim())) {
+                        hatalar.push("- Ad Soyad sadece harflerden oluşmalıdır.");
+                    }
                     
                     if (!this.form.email.trim()) {
                         hatalar.push("- E-posta alanı boş bırakılamaz.");
@@ -185,7 +195,7 @@
                     if (!this.form.telefon.trim()) {
                         hatalar.push("- Telefon alanı boş bırakılamaz.");
                     } else if (!telefonRegex.test(this.form.telefon)) {
-                        hatalar.push("- Telefon sadece rakamlardan oluşmalı ve 10-11 haneli olmalıdır.");
+                        hatalar.push("- Telefon '05' ile başlamalı ve 10-11 haneli rakamlardan oluşmalıdır.");
                     }
                     
                     if (!this.form.konu) hatalar.push("- Lütfen bir konu seçiniz.");

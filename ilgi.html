@@ -89,13 +89,13 @@
                     if(data.results && data.results.length > 0) {
                         const film = data.results[0];
                         const hdResim = film.artworkUrl100.replace('100x100bb', '600x600bb');
-                        kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', hdResim, film.trackViewUrl);
+                        kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', hdResim, 'https://www.imdb.com/title/tt0120737/');
                     } else {
-                        kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg', 'https://itunes.apple.com/us/movie/the-lord-of-the-rings-the-fellowship-of-the-ring/id598284457');
+                        kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg', 'https://www.imdb.com/title/tt0120737/');
                     }
                 })
                 .catch(err => {
-                    kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg', '#');
+                    kartEkle("Yüzüklerin Efendisi: Yüzük Kardeşliği", 'Kategori: Sinema Filmi', 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg', 'https://www.imdb.com/title/tt0120737/');
                 });
 
             fetch('https://api.tvmaze.com/shows/1505')
